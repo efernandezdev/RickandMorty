@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Rick and Morty</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Rick and Morty</h1>
+      <div class="search">
+        <!-- <div class="bar"> -->
+        <form action="#">
+          <div class="box">
+            <label for="input" class="input">Nombre</label>
+            <input class="input" type="text" id="input" />
+          </div>
+          <div class="selector">
+            <label for="input-select">Estado :</label>
+            <select class="input-select" name="input-select">
+              <option disabled hidden selected>Seleccionar</option>
+              <option value="">Todos</option>
+              <option value="dead">Muerto</option>
+              <option value="alive">Vivo</option>
+              <option value="unknown">Desconocido</option>
+            </select>
+          </div>
+        </form>
+        <!-- </div> -->
+      </div>
+      <div class="box-cards"></div>
+
+      <template id="template">
+        <div class="template-cards">
+          <div class="card">
+            <h2 class="name">Name Character</h2>
+            <img class="images" src="" alt="" />
+            <h3 class="gender">Genero</h3>
+            <h2 class="status">Estado</h2>
+          </div>
+        </div>
+      </template>
+    </main>
+    <div class="container">
+      <button onclick="afterPage()">Prev</button>
+      <button onclick="nextPage()">Next</button>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
