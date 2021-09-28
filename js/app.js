@@ -74,7 +74,6 @@ input.addEventListener("keyup", async (e) => {
       center.appendChild(p);
 
       box.appendChild(center);
-
     } else {
       // let respJson = await resp.json();
       let dataResp = respJson.results;
@@ -164,6 +163,7 @@ nextPage = async () => {
     const data = json.results;
     next = json.info.next;
     after = json.info.prev;
+    window.scrollTo(0, 0);
     pintarCards(data);
   }
 };
@@ -175,6 +175,7 @@ afterPage = async () => {
     const data = json.results;
     after = json.info.prev;
     next = json.info.next;
+    window.scrollTo(0, 0);
     pintarCards(data);
   }
 };
